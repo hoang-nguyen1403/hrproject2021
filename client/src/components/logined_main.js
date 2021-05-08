@@ -5,15 +5,14 @@ import './Semantic/semantic.min.css'
 import './style.css'
 import {Button, Modal} from 'semantic-ui-react'
 
-import logo_login from './avatar.jpg'
-
+import Table_Info from "./Notification_table";
 
 const Logined_Main = (props) => {
     return (
         <div className="ui internally celled grid">
             <div className="row">
                 {/*personal information*/}
-                <div className="three wide column">
+                <div className="three wide column container">
                     <div className="ui card item">
                         <h4 className="ui horizontal inverted divider">
                         </h4>
@@ -69,11 +68,9 @@ const Logined_Main = (props) => {
 
                 <div className="ui vertical divider"></div>
                 {/*main information*/}
-                <div className="nine wide column">
-                    <p>hoang</p>
-                </div>
-                <div className="three wide column">
-                    Hoang
+                <div className="twelve wide column">
+                    <Table_Info/>
+
                 </div>
             </div>
         </div>

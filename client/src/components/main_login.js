@@ -10,7 +10,7 @@ import Logined_Main from "./logined_main";
 import logo_login from './avatar.jpg'
 import top_button from "./top_button";
 import Topbuton from "./top_button";
-
+import Footer from "./login_footer";
 
 
 const Main_login = (props) =>{
@@ -27,7 +27,15 @@ const Main_login = (props) =>{
                     <Logined_Main image_log={logo_login}/>
                 </div>
             </div>
+            <div className="row divider"></div>
+
+            <div className='row'>
+                <div className='column'>
+                    <Footer/>
+                </div>
+            </div>
             <Topbuton/>
+
         </div>
     )
 }
