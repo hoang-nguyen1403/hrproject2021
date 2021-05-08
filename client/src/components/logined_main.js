@@ -7,16 +7,19 @@ import {Button, Modal} from 'semantic-ui-react'
 
 import logo_login from './avatar.jpg'
 
+
 const Logined_Main = (props) => {
     return (
         <div className="ui internally celled grid">
             <div className="row">
+                {/*personal information*/}
                 <div className="three wide column">
                     <div className="ui card item">
                         <h4 className="ui horizontal inverted divider">
                         </h4>
+
                         <div className="image ">
-                            <img className='ui small circular rotate reveal image' src={logo_login}/>
+                            <img className='ui medium circular image' src={props.image_log}/>
                         </div>
                         <div className="content">
                             <a className="header">Hoang Nguyen</a>
@@ -63,7 +66,10 @@ const Logined_Main = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="ten wide column">
+
+                <div className="ui vertical divider"></div>
+                {/*main information*/}
+                <div className="nine wide column">
                     <p>hoang</p>
                 </div>
                 <div className="three wide column">

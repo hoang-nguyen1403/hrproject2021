@@ -35,8 +35,7 @@ function Main_login_refresh(){
     ReactDOM.render(<Main_login/>, document.getElementById("root"))
 }
 
-const Logined_Menubar = (props) => {
-    const [firstOpen, setFirstOpen] = React.useState(false)
+function Logined_Menubar(props) {
     return (
         <div className="ui huge fixed top teal inverted menu">
             <div className='item'>
@@ -66,7 +65,7 @@ const Logined_Menubar = (props) => {
                 <a className='item' href='#' id='mini_search_bar' onClick={turn_on_search}><i
                     className='search icon'></i></a>
                 <div className='ui simple dropdown item'>
-                    <i className='user circle icon'></i>
+                    <img className='ui mini spaced circular image' src={props.image_log}/>
                     <div className=' vertical menu'>
                         <a href='#' className='item'>
                             <i className="question circle outline icon"></i>
