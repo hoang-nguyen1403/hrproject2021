@@ -18,15 +18,15 @@ module.exports = function(app) {
         controller.employeeBoard
     );
 
-    // app.get(
-    //     "/api/test/mod",
-    //     [authJwt.verifyToken, authJwt.isModerator],
-    //     controller.moderatorBoard
-    // );
+    app.get(
+        "/api/test/admin",
+        [authJwt.verifyToken, authJwt.isAdmin],
+        controller.allUsers
+    );
 
     app.get(
         "/api/test/manager",
         [authJwt.verifyToken, authJwt.isManager],
-        controller.managerBoard
+        controller.managerBoard,
     );
 };

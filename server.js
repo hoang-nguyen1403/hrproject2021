@@ -32,9 +32,13 @@ require('./app/routes/user_routes')(app);
 //         id: 2,
 //         name: "manager"
 //     });
+//     Role.create({
+//         id: 3,
+//         name: "admin"
+//     });
 // }
 //
-// db.sequelize.sync().then(() =>{
+// db.sequelize.sync({ force: true }).then(() =>{
 //     initial();
 // });
 db.sequelize.sync()

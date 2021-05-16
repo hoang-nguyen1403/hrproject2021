@@ -80,6 +80,11 @@ exports.signin = (req, res) => {
                 res.status(200).send({
                     id: user.id,
                     user_name: user.user_name,
+                    full_name: user.full_name,
+                    address:user.address,
+                    gender: user.gender,
+                    team:user.team,
+                    country: user.country,
                     email: user.email,
                     roles: authorities,
                     accessToken: token

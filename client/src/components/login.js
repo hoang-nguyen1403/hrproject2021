@@ -10,6 +10,7 @@ import './style.css'
 import {Button, Modal} from 'semantic-ui-react'
 import Register from './RegisterForm'
 import Main_login from "./main_login";
+import BoardUser from "./all_users";
 import AuthService from "../services/auth_service";
 
 
@@ -17,8 +18,8 @@ function Load_main_login(){
     ReactDOM.render(<Main_login/>, document.getElementById("root"))
 }
 
-function Register_open(){
-    ReactDOM.render(<Register />, document.getElementById("main_root"))
+function Load_Users(){
+    ReactDOM.render(<BoardUser/>, document.getElementById("root"))
 }
 
 const required = value => {
@@ -106,7 +107,7 @@ export default class Login extends React.Component {
         if (this.checkBtn.context._errors.length === 0) {
             AuthService.login(this.state.username, this.state.password).then(
                 () => {
-                    Load_main_login()
+                    Load_Users()
                 },
                 error => {
                     const resMessage =
